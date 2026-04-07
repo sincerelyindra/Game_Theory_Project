@@ -154,31 +154,4 @@ python scripts/03_adaptive_ci_experiments.py
 
 ---
 
-## Reporting alignment
 
-This repo is intentionally split into three top-level experimental tracks because the report is centered on:
-- the **reproduction study**,
-- the **Dominick’s rolling backtest**, and
-- the **adaptive CI extension**.
-
-See `docs/REPORT_ALIGNMENT.md` for a section-by-section mapping from the report to the codebase.
-
----
-
-## Good GitHub hygiene
-
-- Keep raw datasets and raw result bundles under `data/raw/` and `results/*/raw/`.
-- Store generated figures in `results/.../figures/` if you rerun experiments.
-- Avoid committing notebook checkpoints or extracted temporary files.
-- Add concise docstrings to all public functions.
-- Keep all paths relative so the repo runs on another machine without manual edits.
-
----
-
-## Minimal next cleanup step
-
-If you do not want a full refactor right now, the best immediate improvement is:
-1. rename the three scripts into numbered experiment scripts,
-2. move all zip files into `data/raw/` or `results/.../raw/`,
-3. add this README and the alignment note,
-4. optionally refactor shared functions into `src/robust_pricing/` later.
